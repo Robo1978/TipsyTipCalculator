@@ -12,6 +12,7 @@
 		D35EB38020B096F5003BEBEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D35EB37E20B096F5003BEBEE /* Main.storyboard */; };
 		D35EB38220B096F6003BEBEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D35EB38120B096F6003BEBEE /* Assets.xcassets */; };
 		D35EB38520B096F6003BEBEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D35EB38320B096F6003BEBEE /* LaunchScreen.storyboard */; };
+		D35EB38F20B0BD39003BEBEE /* TipCalcBrains.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35EB38E20B0BD39003BEBEE /* TipCalcBrains.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		D35EB38120B096F6003BEBEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D35EB38420B096F6003BEBEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D35EB38620B096F6003BEBEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D35EB38E20B0BD39003BEBEE /* TipCalcBrains.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCalcBrains.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,8 @@
 		D35EB37920B096F5003BEBEE /* TipsyTipCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				D35EB38D20B0BD04003BEBEE /* Controller */,
+				D35EB38C20B0BCE7003BEBEE /* Model */,
 				D35EB37A20B096F5003BEBEE /* AppDelegate.swift */,
 				D35EB37C20B096F5003BEBEE /* ViewController.swift */,
 				D35EB37E20B096F5003BEBEE /* Main.storyboard */,
@@ -62,6 +66,21 @@
 				D35EB38620B096F6003BEBEE /* Info.plist */,
 			);
 			path = TipsyTipCalculator;
+			sourceTree = "<group>";
+		};
+		D35EB38C20B0BCE7003BEBEE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D35EB38E20B0BD39003BEBEE /* TipCalcBrains.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D35EB38D20B0BD04003BEBEE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +156,7 @@
 			files = (
 				D35EB37D20B096F5003BEBEE /* ViewController.swift in Sources */,
 				D35EB37B20B096F5003BEBEE /* AppDelegate.swift in Sources */,
+				D35EB38F20B0BD39003BEBEE /* TipCalcBrains.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
