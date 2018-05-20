@@ -47,7 +47,10 @@
                                 </constraints>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="billAmountChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="IJ7-hc-g1r"/>
+                                </connections>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="reG-CL-mWR">
                                 <rect key="frame" x="10" y="186" width="355" height="275"/>
@@ -64,8 +67,11 @@
                                                 <color key="textColor" red="0.0" green="0.79215686269999996" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ohs-fw-7cs">
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.14999999999999999" minValue="0.10000000000000001" maxValue="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="ohs-fw-7cs">
                                                 <rect key="frame" x="84" y="0.0" width="273" height="56"/>
+                                                <connections>
+                                                    <action selector="tipPercentChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="KE5-Tf-dIn"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                     </stackView>
@@ -175,6 +181,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="enterBillTF" destination="1nT-mf-3Yd" id="eRn-GV-a2c"/>
+                        <outlet property="tipAmountLbl" destination="2Op-3q-whg" id="cWu-dR-8gt"/>
+                        <outlet property="tipPercentLbl" destination="kju-n3-jA5" id="IAQ-zb-lEc"/>
+                        <outlet property="tipPercentSlider" destination="ohs-fw-7cs" id="hZV-18-rJp"/>
+                        <outlet property="totalAmount" destination="aVg-nt-bGs" id="kbk-BT-W5L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
