@@ -20,18 +20,22 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        tipPercentValue()
     }
 
     @IBAction func billAmountChange(_ sender: Any) {
+        calculateTip()
     }
     @IBAction func tipPercentChange(_ sender: Any) {
+        tipPercentValue()
+        calculateTip()
     }
     
     func calculateTip() {
         tipCalcBrains.tipPercent = Double(tipPercentSlider.value)
         tipCalcBrains.billAmount = ((enterBillTF.text)! as NSString).doubleValue
         tipCalcBrains.calculateTip()
+        updateBillUI()
     }
     
     func updateBillUI() {
