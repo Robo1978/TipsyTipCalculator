@@ -24,10 +24,23 @@ class ViewController: UIViewController {
     }
 
     @IBAction func billAmountChange(_ sender: Any) {
-        print("my value changed")
     }
     @IBAction func tipPercentChange(_ sender: Any) {
-        print("hey the slider changed")
+    }
+    
+    func calculateTip() {
+        tipCalcBrains.tipPercent = Double(tipPercentSlider.value)
+        tipCalcBrains.billAmount = ((enterBillTF.text)! as NSString).doubleValue
+        tipCalcBrains.calculateTip()
+    }
+    
+    func updateBillUI() {
+        totalAmount.text = String(format: "$%0.2f", tipCalcBrains.totalAmount)
+        tipAmountLbl.text = String(format: "$%0.2f", tipCalcBrains.tipAmount)
+    }
+    
+    func tipPercentValue() {
+        tipPercentLbl.text = "Tip: \(Int(tipPercentSlider.value * 100))%"
     }
     
 }
